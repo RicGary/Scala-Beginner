@@ -1,14 +1,14 @@
 package lectures.part1basics
 
 import scala.annotation.tailrec
+import scala.jdk.Accumulator
 
 object Recursion extends App {
-
   def factorial(n: Int): Int =
     if (n <= 1) 1
     else {
-      println("Computing factorial of " + n + " - I first need factorial of " + (n-1))
-      val result = n * factorial(n-1)
+      println("Computing factorial of " + n + " - I first need factorial of " + (n - 1))
+      val result = n * factorial(n - 1)
       println("Computed factorial of " + n)
 
       result
@@ -39,45 +39,44 @@ object Recursion extends App {
     = 1 * 2 * 3 * 4 * ... * 10
    */
 
-  println(anotherFactorial(20000))
+  //println(anotherFactorial(20000))
 
   // WHEN YOU NEED LOOPS, USE _TAIL_ RECURSION.
 
   /*
-    Exercises:
-    1.  Concatenate a string n times
-    2.  IsPrime function tail recursive
-    3.  Fibonacci function, tail recursive.
-   */
+      Exercises:
+      1.  Concatenate a string n times
+      2.  IsPrime function tail recursive
+      3.  Fibonacci function, tail recursive.
+  */
 
-  @tailrec
-  def concatenateTailrec(aString: String, n: Int, accumulator: String): String =
-    if (n <= 0) accumulator
-    else concatenateTailrec(aString, n-1, aString + accumulator)
-
-  println(concatenateTailrec("hello", 3, ""))
+  // 2 IsPrime
 
   def isPrime(n: Int): Boolean = {
+    def isPrimeUntil(t: Int): Boolean =
+      if (t <= 1) true
+      else n % t != 0 && isPrimeUntil(t - 1)
+
+    isPrimeUntil(n / 2)
+  }
+
+  def anotherIsPrime(n: BigInt): Boolean = {
     @tailrec
-    def isPrimeTailrec(t: Int, isStillPrime: Boolean): Boolean =
-      if (!isStillPrime) false
+    def isPrimeUntil(t: BigInt, isStillPrime: Boolean): Boolean =
+      if(!isStillPrime) false
       else if (t <= 1) true
-      else isPrimeTailrec(t - 1, n % t != 0 && isStillPrime)
+        // %
+      else isPrimeUntil(t - 1, n % t != 0 && isStillPrime)
 
-    isPrimeTailrec(n / 2, true)
+    isPrimeUntil(n / 2, isStillPrime = true)
   }
 
-  println(isPrime(2003))
-  println(isPrime(629))
 
-  def fibonacci(n: Int): Int = {
-    def fiboTailrec(i: Int, last: Int, nextToLast: Int): Int =
-      if(i >= n) last
-      else fiboTailrec(i + 1, last + nextToLast, last)
+  /*
+      false and true -> false
+  5, 10 % 5 != 0 and true -> false
 
-    if (n <= 2) 1
-    else fiboTailrec(2, 1, 1)
-  }
+  10 % 4 != 0 and false
 
-  println(fibonacci(8)) // 1 1 2 3 5 8 13, 21
+  */
 }
