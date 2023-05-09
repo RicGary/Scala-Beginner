@@ -14,7 +14,6 @@ object Recursion extends App {
       result
     }
 
-  println(factorial(10))
   //  println(factorial(5000)) // stack overflow!
 
   def anotherFactorial(n: Int): BigInt = {
@@ -70,13 +69,29 @@ object Recursion extends App {
 
     isPrimeUntil(n / 2, isStillPrime = true)
   }
-
-
   /*
       false and true -> false
   5, 10 % 5 != 0 and true -> false
-
   10 % 4 != 0 and false
 
   */
+
+  def FibTailRec(n: Int): Int = {
+    @tailrec  /*           n - 1           n - 2                    */
+    def accFib(i: Int, last: Int, nextToLast: Int): Int =
+      if (i >= n) last
+      else {
+        println("-" * 5)
+        println("N: " + n + "\nI: " + i)
+        accFib(i + 1, last + nextToLast, last)
+      }
+
+    if (n <= 2) 1
+    else accFib(2, 1, 1)
+  }
+  /*
+  Fibb we got n-1 + n-2
+  In tail recursion we have the numbers of return in a normal fuction as qtd. of params
+  */
+  println(FibTailRec(8))
 }

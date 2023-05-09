@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8f54a02-e697-48a9-ae5f-1ecf9211650a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/playground/Test.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/playground/Recursion.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/playground/Recursion.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/classes/playground/Recursion$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/classes/playground/Recursion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/classes/playground/Recursion.tasty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/update/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.2/update/update_cache_3/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/classes/lectures/part1basics/Recursion$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.2/classes/lectures/part1basics/Recursion$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/classes/lectures/part1basics/Recursion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.2/classes/lectures/part1basics/Recursion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.2/classes/lectures/part1basics/Recursion.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.2/classes/lectures/part1basics/Recursion.tasty" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Recursion">
     <configuration name="Expressions" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="lectures.part1basics.Expressions" />
       <module name="Scala-Beginners" />
@@ -112,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Recursion" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Playground" />
         <item itemvalue="Application.Expressions" />
       </list>
